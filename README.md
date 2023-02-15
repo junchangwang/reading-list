@@ -1,3 +1,2 @@
-# reading-list
+# Welcome to Junchang's reading list.
 
-Junchang's reading list.
