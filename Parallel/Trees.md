@@ -1,5 +1,5 @@
 
-#### Concurrent Trees
+#### General Structure
 
 * **[EFR10, NB-BST]** Faith Ellen, Panagiota Fatourou, Eric Ruppert, and Franck van Breugel. "Non-blocking Binary Search Trees". In PODC'10.
   * This paper describes the first non-blocking BST using single-word CASes. The core idea is to expand each tree node with a flag field, which works as a lock and serializes concurrent updates. To guarantee the property of non-blocking, each update operation stores the necessary information required by other threads to help complete the operation in an object, and saves a reference to the object also in the flag field. The implementation is leaf-oriented and unbalanced.
@@ -23,7 +23,15 @@
 * **[BBB20 KiWi]** Dmitry Basin, Edward Bortnikov, and Anastasia Braginsky, et. al. "KiWi: A Key-value Map for Scalable Real-Time Analytics". In PPoPP'17.
   * This paper presents KiWi, a high-performance KV map, which, in some sense, is similar to a B+-tree in architecture. In addition to standard operations, KiWi supports wait-free scans and lock-free rebalancing operations which can not only merge and split chunks (leaf nodes) but also reorganize the data layout of each chunk to facilitate scan operations. KiWi employs a global PSA array and a group of per-chunk PPA arrays to allow scan operations and put operations to respectively broadcast their existence. Therefore, scan operations can help suspended update operations set their timestamp values, dramatically simplifying the synchronization mechanisms. Moreover, KiWi utilizes MVCC to enable wait-free scans, and uses helping mechanisms to resolve conflicts in a single chunk. The global timestamp is maintained by Scans, instead of Updates.
 
-* **[BP12]** Anastasia Braginsky and Erez Petrank. **"A Lock-Free B+ Tree"**. In SPAA'12.
+* **[BP12]** Anastasia Braginsky and Erez Petrank. "A Lock-Free B+ Tree". In SPAA'12.
+  * This paper presents the first lock-free B+-tree. The building block is a special data structure named chunk, which is also from Petrank's group. A chunk can maintain lower- and upper-bound on the number of its elements, and can be split and joined in a lock-free manner. The search paths are manipulated in a lock-free way by using notable non-blocking techniques (mainly, helping). The algorithm has restrictions. Key repetition is not allowed, and the key and the data must fit into a single (double) word. Nevertheless, this is a very complex yet elegant design.
+  
+
 
 * **Related projects**: [ASCYLIB](https://github.com/LPD-EPFL/ASCYLIB), [synchrobench](https://github.com/gramoli/synchrobench).
 
+
+#### Trees in DBMS
+
+* **[GRA10]** Goetz Graefe "A Survey of B-Tree Locking Techniques". In TODS'10.
+  * This is a survey on concurrent trees that can reblance. Graefe presents a comprehensive background and primilinaries, a very illustrative discussion on the differences between locks and latches in DBMS. Graefe then discusses in detail how a B-Tree's internal structure should be correctly protected by using latches, and how its logical contents can be protected by using locks.
