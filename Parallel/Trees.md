@@ -35,3 +35,6 @@
 
 * **[GRA10]** Goetz Graefe "A Survey of B-Tree Locking Techniques". In TODS'10.
   * This is a survey on concurrent trees that can reblance. Graefe presents a comprehensive background and primilinaries, a very illustrative discussion on the differences between locks and latches in DBMS. Graefe then discusses in detail how a B-Tree's internal structure should be correctly protected by using latches, and how its logical contents can be protected by using locks.
+
+* **BTree in real DBMS** [PostgreSQL](https://www.youtube.com/watch?v=VO5xmj-6aT4)
+
