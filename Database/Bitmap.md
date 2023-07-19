@@ -5,6 +5,13 @@
 
 ---
 
+#### Cardinality
+
+* **[WSS2008]** Kesheng Wu, Kurt Stockinger, and Arie Shoshani. "**Breaking the Curse of Cardinality on Bitmap Indexes**". in SSDBM'08.
+  - The authors attempted to remove the limitation of building bitmap indexes on large-cardinality attributes by improving binning technique. The core is an interlayer data structure, named OrBiC (Order-preserving Bin-based Clustering), between a bitmap index and the underlying storage. OrBiC is fundamentally a projection of the whole attribute, but is reordered according to the bin numbers and preserving the relative order of values in each bin. By checking OrBiC, we can reduce the number of candidate checks, improving system performance. However, the memory footprint of OrBiC could be a limitation for large datasets. E.g., for a dataset with 10B entries, OrBiC consumes 8*10B = 80GB of storage space. There are some optimizations in the paper, but the memory consumption is still huge.
+
+---
+
 #### Coding Schemes
 
 * **[CI98]** Chee-Yong Chan, and Yannis E. Ioannidis. "**Bitmap Index Design and Evaluation**". In SIGMOD'98.
@@ -22,9 +29,14 @@
 
 * **[WOS02, WAH]** Kesheng Wu, Ekow J. Otoo, and Arie Shoshani. "Compressing Bitmap Indexes for Faster Search Operations". In SSDBM'02.
 
+* **[WOS05, WAH]** Kesheng Wu, Ekow J. Otoo, and Arie Shoshani. "Optimizing Bitmap Indices with Efficient Compression". In TODS'05.
+
 ---
 
 #### Binning
+
+* **[KOU]** Nick Koudas. "**Space Efficient Bitmap Indexing**. In CIKM'00.
+  - This seed paper presents the binning technique and highlights the key performance factors: the frequency of access of the attribute and the frequency of occurrence of the attribute value. This paper gives a formal problem definition and complexity analysis. Respect!
 
 * **[RSW05]** Doron Rotem, Kurt Stockinger, and Kesheng Wu. "**Optimizing Candidate Check Costs for Bitmap Indices**". In CIKM'05.
     - This paper underlines that *candidate check*, the unavoidable access to the original data when bitmap indices with binning are used, is the main performance bottleneck of common query operations, such that the placement strategies of bin boundaries are of importance. The authors then propose a dynamic-programming based mechanism which, by taking *query distribution* and *data distribution* of the dataset into consideration, can suggest an optimal binning strategy. Note that the algorithm assumes that (1) the data set is read-only, (2) characteristics of the dataset and query requests are known ahead of time.
