@@ -1,7 +1,8 @@
 
-#### Comprehensive
+#### Seed papers
 
-* **[WAB09, FastBit]** K Wu, S Ahern, E W Bethel, et al. "**FastBit: Interactively Searching Massive Data**". Lawrence Berkeley National Laboratory.
+* **[OQ97]** Patrick O'Neil and Dallan Quass. "Improved Query Performance with Variant Indexes". In SIGMOD'97.
+  - This paper made a comprehensive comparison among different indexing schemes including Value-List, Projection, and Bit-Sliced-based bitmap indexes.
 
 ---
 
@@ -30,6 +31,8 @@
 * **[WOS02, WAH]** Kesheng Wu, Ekow J. Otoo, and Arie Shoshani. "Compressing Bitmap Indexes for Faster Search Operations". In SSDBM'02.
 
 * **[WOS05, WAH]** Kesheng Wu, Ekow J. Otoo, and Arie Shoshani. "Optimizing Bitmap Indices with Efficient Compression". In TODS'05.
+* 
+* **[WAB09, FastBit]** K Wu, S Ahern, E W Bethel, et al. "**FastBit: Interactively Searching Massive Data**". Lawrence Berkeley National Laboratory.
 
 ---
 
