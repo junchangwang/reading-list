@@ -3,6 +3,12 @@
 
 * **[OQ97]** Patrick O'Neil and Dallan Quass. "Improved Query Performance with Variant Indexes". In SIGMOD'97.
   - This paper made a comprehensive comparison among different indexing schemes including Value-List, Projection, and Bit-Sliced-based bitmap indexes.
+ 
+* **[CI98]** Chee-Yong Chan, and Yannis E. Ioannidis. "**Bitmap Index Design and Evaluation**". In SIGMOD'98.
+    - The authors examined the space-time tradeoff of various bitmap indices by using a proposed framework that evaluates indexes in two dimensions. Based on a proposed framework, they identify (1) the time-optimal bitmap indices, (2) the space-optimal bitmap indices, (3) the bitmap index with the optimal space-time tradeoff, and (4) the time-optimal bitmap indices under a given disk-space constraint.
+
+* **[CI99]** Chee-Yong Chan, and Yannis E. Ioannidis. "**An Efficient Bitmap Encoding Scheme for Selection Queries**". In SIGMOD'99.
+    - This paper presents a detailed analysis of the performance of the existing two types of encoding schemes (equality- and range-encoded) with respect to various query operations (equality, (two-sided) range query, and membership query). The authors then propose a new encoding scheme (and four additional hybrid schemes), called *interval-encoding*, that takes almost half the space of range encoding and at the same time, guarantees at most a two-scan evaluation for any query.
 
 ---
 
@@ -10,16 +16,6 @@
 
 * **[WSS2008]** Kesheng Wu, Kurt Stockinger, and Arie Shoshani. "**Breaking the Curse of Cardinality on Bitmap Indexes**". in SSDBM'08.
   - The authors attempted to remove the limitation of building bitmap indexes on large-cardinality attributes by improving binning technique. The core is an interlayer data structure, named OrBiC (Order-preserving Bin-based Clustering), between a bitmap index and the underlying storage. OrBiC is fundamentally a projection of the whole attribute, but is reordered according to the bin numbers and preserving the relative order of values in each bin. By checking OrBiC, we can reduce the number of candidate checks, improving system performance. However, the memory footprint of OrBiC could be a limitation for large datasets. E.g., for a dataset with 10B entries, OrBiC consumes 8*10B = 80GB of storage space. There are some optimizations in the paper, but the memory consumption is still huge.
-
----
-
-#### Coding Schemes
-
-* **[CI98]** Chee-Yong Chan, and Yannis E. Ioannidis. "**Bitmap Index Design and Evaluation**". In SIGMOD'98.
-    - The authors examined the space-time tradeoff of various bitmap indices by using a proposed framework that evaluates indexes in two dimensions. Based on a proposed framework, they identify (1) the time-optimal bitmap indices, (2) the space-optimal bitmap indices, (3) the bitmap index with the optimal space-time tradeoff, and (4) the time-optimal bitmap indices under a given disk-space constraint.
-
-* **[CI99]** Chee-Yong Chan, and Yannis E. Ioannidis. "**An Efficient Bitmap Encoding Scheme for Selection Queries**". In SIGMOD'99.
-    - This paper presents a detailed analysis of the performance of the existing two types of encoding schemes (equality- and range-encoded) with respect to various query operations (equality, (two-sided) range query, and membership query). The authors then propose a new encoding scheme (and four additional hybrid schemes), called *interval-encoding*, that takes almost half the space of range encoding and at the same time, guarantees at most a two-scan evaluation for any query.
 
 ---
 
