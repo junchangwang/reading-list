@@ -30,6 +30,9 @@
 
 * **[WAB09, FastBit]** K Wu, S Ahern, E W Bethel, et al. "**FastBit: Interactively Searching Massive Data**". Lawrence Berkeley National Laboratory.
 
+* **[WOS01]** Kesheng Wu, Ekow J. Otoo, and Arie Shoshani. "Compressed bitmap indices for efficient query processing". Lawrence Berkeley National Laboratory.
+    - In this paper, the authors experimented with (WAH) compressed bitmap indexes with different encoding schemes. The conclusion is that the equality-encoded bitmap indexes are the most space-efficient, and the range-encoded versions are the most time-efficient.
+
 * **[PLWAH10]** "**Position list word aligned hybrid: optimizing space and performance for compressed bitmaps**". In EDBT'10.
 
 ---
