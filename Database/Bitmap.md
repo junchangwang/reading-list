@@ -1,6 +1,8 @@
 
 #### Seed papers
 
+* **[WLO85]** H. K. T. Wong, H.-F. Liu, F. Olken, D. Rotem, and L. Wong. "**Bit Transposed Files**". In VLDB'85.
+
 * **[OQ97]** Patrick O'Neil and Dallan Quass. "**Improved Query Performance with Variant Indexes**". In SIGMOD'97.
   - This paper made a comprehensive comparison among different indexing schemes including Value-List, Projection, and Bit-Sliced-based bitmap indexes.
  
