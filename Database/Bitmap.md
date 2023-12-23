@@ -4,7 +4,7 @@
 * **[WLO85]** H. K. T. Wong, H.-F. Liu, F. Olken, D. Rotem, and L. Wong. "**Bit Transposed Files**". In VLDB'85.
 
 * **[OQ97]** Patrick O'Neil and Dallan Quass. "**Improved Query Performance with Variant Indexes**". In SIGMOD'97.
-  - This paper made a comprehensive comparison among different indexing schemes including Value-List, Projection, and Bit-Sliced-based bitmap indexes.
+  - The authors performed a comprehensive comparison (in terms of expense) among different indexing schemes used in MODEL 240 (Value-List, Projection, and Bit-Sliced-based bitmap indexes). This paper introduced the concept of Segmentation.
  
 * **[CI98]** Chee-Yong Chan, and Yannis E. Ioannidis. "**Bitmap Index Design and Evaluation**". In SIGMOD'98.
     - The authors examined the space-time tradeoff of various bitmap indices by using a proposed framework that evaluates indexes in two dimensions. Based on a proposed framework, they identify (1) the time-optimal bitmap indices, (2) the space-optimal bitmap indices, (3) the bitmap index with the optimal space-time tradeoff, and (4) the time-optimal bitmap indices under a given disk-space constraint.
