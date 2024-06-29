@@ -2,7 +2,7 @@
 #### Seed papers
 
 * **[WLO85]** H. K. T. Wong, H.-F. Liu, F. Olken, D. Rotem, and L. Wong. "**Bit Transposed Files**". In VLDB'85.
-  - The authors first examined the characteristics of Scientific/Statistical Databases (SSDB), and then proposed a new mechanism to store and query data in SSDB efficiently. AFAIK, this is the first research that (1) discusses in detail different encoding schemes and (2) proposes the bitvector organization that stores the Nth bits of all of the encoded values sequentially, in a single file, bringing several attractive features, including being amenable to compression.
+  - The authors first examined the characteristics of Scientific/Statistical Databases (SSDB), and then proposed a new mechanism to store and query data in SSDB efficiently. AFAIK, this is the first research that (1) discusses in detail different encoding schemes and (2) proposes the bitvector organization that stores the Nth bits of all of the encoded values sequentially, in a single file, bringing several attractive features, including being amenable to compression. Furthermore, this paper presented a complete system design. Highly respect.
 
 * **[OQ97]** Patrick O'Neil and Dallan Quass. "**Improved Query Performance with Variant Indexes**". In SIGMOD'97.
   - The authors performed a comprehensive comparison (in terms of expense) among different indexing schemes used in MODEL 240 (Value-List, Projection, and Bit-Sliced-based bitmap indexes). This paper introduced the concept of Segmentation.
