@@ -12,7 +12,7 @@
     Furthermore, this paper has a nice discussion on the underlying bit-matrix: "if one views this set as a two-dimensional bit matrix, the focus is on the columns. If the focus moves on the rows, however, then the index can be seen as the list of attribute values represented in some particular way. As there is a large number of possible representations for attribute values, this clearly opens up the way for defining a whole host of bitmap indexing schemes."
 
 * **[CI99]** Chee-Yong Chan, and Yannis E. Ioannidis. "**An Efficient Bitmap Encoding Scheme for Selection Queries**". In SIGMOD'99.
-    - This paper presents a detailed analysis of the performance of the existing two types of encoding schemes (equality- and range-encoded) with respect to various query operations (equality, (two-sided) range query, and membership query). The authors then propose a new encoding scheme (and four additional hybrid schemes), called *interval-encoding*, that takes almost half the space of range encoding and at the same time, guarantees at most a two-scan evaluation for any query.
+    - This paper presents a detailed analysis of the performance of the existing two types of encoding schemes (equality- and range-encoded) with respect to various query operations (equality, (two-sided) range query, and membership query). The authors then propose a new encoding scheme (and four additional hybrid schemes), called *interval-encoding*, that takes about half the space of range encoding and at the same time, guarantees at most a two-scan evaluation for any query.
 
 ---
 
