@@ -12,6 +12,7 @@
 * **[WBB'21]** Yuanhao Wei, Naama Ben-David, Guy E. Blelloch, Panagiota Fatourou, Eric Ruppert, and Yihan Sun. "Constant-Time Snapshots with Applications to Concurrent Data Structures". In PPoPP'21.
     - This paper presents an effective approach for taking snapshots of CAS-based linked concurrent data structures. The core idea is that only taking-snapshot operations (instead of updates) could increment the global timestamp, and that concurrent read and update operations can help a successful CAS operation to set the timestamp of the latest version node that was just inserted by the CAS operations, which noticeably simplifies the process of atomically updating the data structure and inserting a new version node. Furthermore, the authors present optimizations such as avoiding indirection and removing redundant version nodes.
     - [Yuanhao's presentation](https://www.youtube.com/watch?v=k4MoXSuKKAE).
+    - verlib: Concurrent Versioned Pointers. In PPoPP'24
 ---
 
 #### Atomic updates
