@@ -38,3 +38,6 @@
 
 * **BTree in real DBMS** [PostgreSQL](https://www.youtube.com/watch?v=VO5xmj-6aT4)
 
+* **[SBL20, P-Tree]** Yihan Sun, Guy E. Blelloch, Wan Shen Lim, and Andrew Pavlo. On Supporting Efficient Snapshot Isolation for
+ Hybrid Workloads with Multi-Versioned Indexes. In VLDB'20.
+  * https://www.youtube.com/watch?v=532ONpw2pGk
